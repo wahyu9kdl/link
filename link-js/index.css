@@ -1,0 +1,137 @@
+.tt-input {
+  font-size: 2em;
+  padding: 0.3em 0.6em;
+  height: 2.3em;
+}
+.twitter-typeahead {
+  width: 100%;
+  display: block !important;
+}
+.tt-menu {
+  width: 100%;
+  margin-top: 0.25em;
+  padding: 0.2em 0;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.tt-suggestion {
+  padding: 0.6em 0.7em;
+  line-height: 0.75em;
+  font-size: 1.7em;
+  cursor: pointer;
+}
+.tt-suggestion.tt-cursor,
+.tt-suggestion.tt-cursor .url,
+.tt-suggestion.tt-cursor .type i,
+.tt-suggestion.tt-cursor .tags,
+.tt-suggestion:hover,
+.tt-suggestion:hover .url,
+.tt-suggestion:hover .type i,
+.tt-suggestion:hover .tags {
+  color: #fff;
+  background-color: #0097cf;
+}
+.ta-row * {
+  vertical-align: middle;
+}
+.ta-row:first-child {
+  margin-bottom: 0.2rem;
+}
+.ta-obj .tt-highlight {
+  vertical-align: initial;
+}
+.ta-obj .url {
+  font-size: 1.4rem;
+  color: #666;
+}
+.ta-obj .tags {
+  color: #444;
+  float: right;
+  font-size: 0.75em;
+}
+.ta-obj .type {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.75em;
+}
+.ta-obj .fa-download {
+  color: #45aa27;
+}
+.ta-obj .fa-external-link-square {
+  color: #2e9fcc;
+}
+.ta-obj .fa-bookmark {
+  color: #e74c3c;
+}
+#donate {
+  color: #de0429;
+}
+#donate:hover i {
+  -webkit-animation: heart 0.7s;
+          animation: heart 0.7s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
+#browserstack {
+  color: #f70;
+}
+#browserstack:hover {
+  color: #f50;
+}
+.tag-10 {
+  font-size: 2rem;
+}
+.tag-25 {
+  font-size: 3rem;
+}
+.tag-50 {
+  font-size: 4rem;
+}
+.tag-100 {
+  font-size: 5rem;
+}
+.hashnum {
+  height: 27px;
+  width: 27px;
+  border-radius: 27px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #ccc;
+  font-size: 1rem;
+  margin-right: 4px;
+}
+.hashnum span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#settingsModal .modal-header {
+  padding-bottom: 0;
+}
+#settingsModal .nav-tabs {
+  border-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  #type-form {
+    font-size: 1rem;
+  }
+  .ta-obj .url {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #type-form {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #type-form {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #type-form {
+    font-size: 1.5rem;
+  }
+}
