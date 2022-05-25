@@ -1,0 +1,11 @@
+body {
+    padding: 20px 80px;
+}
+
+#embed {
+    background-color: #eee;
+    padding: 10px 20px;
+    user-select: all;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}
