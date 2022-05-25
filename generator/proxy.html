@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>EzProxy Link Generator</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+    <!--[if IE]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <h1>EzProxy Link Generator</h1>
+        <div class="intro">
+            <p>The EzProxy Link Generator helps you create links which can be used in Blackboard, online courses, reading lists, or bibliographies, to allows students and researchers to access content from outside your institution's network.</p>
+
+        </div>
+        <div class="doi">
+            <h2>DOI EzProxy Link Generator</h2>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Insert your DOI:</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea" id="insDoi"></textarea>
+            </div>
+            <span></span>
+            <button type="button" class="btn btn-primary" id="doiBtn">Generate</button>
+            <div class="form-group">
+                <label for="comment">Your generated URL:</label>
+                <textarea class="form-control" rows="1" id="doiUrl"></textarea>
+            </div>
+        </div>
+
+        <div class="permalink">
+            <h2>Permalink URL Generator</h2>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Insert your Permalink:</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea" id="insPerma"></textarea>
+            </div>
+            <span></span>
+            <button type="button" class="btn btn-primary" id="permaBtn">Generate</button>
+            <div class="form-group">
+                <label for="comment">Your generated URL:</label>
+                <textarea class="form-control" rows="1" id="permaUrl"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   
+<script type="text/javascript">
+$(document).ready(function () {
+    //NOTE Insert your institution's URL here. Usually something like https://ezproxy.someuniv.com:443/
+    var ezProxy = "https://**INSERT_YOUR_EZPROXY_URL_HERE**/login?URL=";
+    var doi = "https://s.awdev.eu.org/";
+
+    //SECTION  generate urls
+    $('#doiBtn').on('click', function (event) {
+
+        if ($('#insDoi').val() == '') {
+            alert('Please insert the DOI'); }
+            else {
+
+                $('#doiUrl').val(ezProxy + doi + $('#insDoi').val());
+            }
+    });
+
+    $('#permaBtn').on('click', function (event) {
+
+        if ($('#insPerma').val() == '') {
+            alert('Please insert the Permalink');
+        } else {
+            $('#permaUrl').val(ezProxy + $('#insPerma').val());
+        }
+    });
+
+    //FIXME  refuse empty fields
+
+    $('#insDoi').blur(function () {
+        if (!this.value) {
+            $(this).parents('p').addClass('warning');
+        }
+    });
+});
+</script>
+</body>
+
+</html>
